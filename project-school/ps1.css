@@ -1,0 +1,15 @@
+body{
+    background-color: cyan;
+}
+.welcome{
+    font-size: 20px;
+    border: solid;
+    border-color: red;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.hello-world{
+    font-size: 20px;
+    color: red;
+}
