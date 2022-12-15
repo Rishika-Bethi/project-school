@@ -1,0 +1,133 @@
+body{
+    background-color: black;
+    font-family: Poppins, sans-serif;
+}
+#bg-video{
+    position: absolute;
+    z-index: 0;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    opacity: 0.5 !important;
+}
+.navbar-nav{
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    margin-right: 40px;
+}
+.nav-link{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.navbar-brand{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 60px;
+    opacity: 1;
+}
+.nav-item{
+    padding-right: 10px;
+}
+.nav-link:hover{
+    color: #f5a425 !important;
+}
+.dropdown-menu{
+    opacity: 1;
+    background-color: white;
+}
+.p1{
+    position: relative;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    margin-left: 60px;
+    margin-top: 150px;
+}
+.p2{
+    position: relative;
+    font-weight: 800;
+    font-size: 40px;
+    color: white;
+    margin-left: 60px;
+}
+.p3{
+    position: relative;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin-left: 60px;
+    max-width: 570px;
+}
+span{
+    color: #33CCFF;
+    cursor: pointer;
+}
+span:hover{
+    color:#f5a425;
+}
+.join-us{
+    position: relative;
+    color: white;
+    background-color:#A12C2F;
+    border: none;
+    margin-left: 60px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 12px 25px 12px 25px;
+}
+.card,
+.card-img{
+    border-radius: 20px !important;
+    height: 270px;
+    width: 410px;
+}
+.card-img-top{
+    margin-top: 20px;
+    height: 60px;
+    width: 60px !important;
+}
+.card-title{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 25px 0 15px;
+}
+.card-text{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 20px;
+}
+.carousel-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 30px 0px 30px;
+}
+.carousel-control-prev-icon:after{
+    content: "<";
+}
+.carousel-control-next-icon:after{
+    content: ">";
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    margin-top: 150px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 0;
+}

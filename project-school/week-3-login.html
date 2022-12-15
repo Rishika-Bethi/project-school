@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h1>LOGIN</h1>
+        <label for="username" style="font-size: 20px;">Username</label>
+        <input type="text" id="username"></input><br><br>
+        <label for="password" style="font-size: 20px;">Password</label>
+        <input type="password" id="password" style="margin: 5px 10px;"></input><br><br>
+        <button onclick="checkPass()">Login</button>
+        <p>Rules:</p>
+        <p>1.Should have a minimum of 8 characters.</p>
+        <p>2.It should have a combination of uppercase letters, lowercase letters and numbers.</p>
+        <p id="demo"></p>
+        <script>
+            function checkPass(){
+                let pass=document.getElementById("password").value;
+                let pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+                if(pass.match(pattern))
+                {
+                    document.getElementById("demo").innerHTML="Valid password";
+                }
+                else{
+                    document.getElementById("demo").innerHTML="Invalid password";
+                }
+            }
+        </script>
+    </body>
+</html>

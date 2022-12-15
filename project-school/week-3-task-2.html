@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task-2</title>
+    </head>
+    <body>
+        <input type="text" id="text-box-1" size="50"></input><br><br>
+        <button onclick="numToWord()">Convert</button><br><br>
+        <input type="text" id="text-box-2" size="50"></input>
+        <script>
+            function numToWord(){
+                let textbox1=document.getElementById("text-box-1");
+                let t=textbox1.value;
+                var n = t.split("");
+                var ones = ['Zero', ' One', ' Two', ' Three', ' Four', ' Five', ' Six', ' Seven', ' Eight', ' Nine'];
+                var twos = ['Ten', ' Eleven', ' Twelve', ' Thirteen', ' Fourteen', ' Fifteen', ' Sixteen', ' Seventeen', ' Eighteen', ' Nineteen'];
+                var tens = ['', 'Ten', ' Twenty', ' Thirty', ' Forty', ' Fifty', ' Sixty', ' Seventy', ' Eighty', ' Ninety'];
+                numLength = n.length;
+                var word = new String();
+                var k=0;
+                if(numLength>3)
+                    word='out of range';
+                else if(numLength==1 || (numLength==2 && n[0]=='0') || (numLength==3 && (n[0]=='0' && n[1]=='0)')))
+                {
+                    var rev = n.reverse();
+                    word+=ones[parseInt(n[0])];
+                }
+                else if(numLength==2 || (numLength==3 && n[0]=='0'))
+                {
+                    switch(numLength){
+                        case 2: k=0;break;
+                        case 3: k=1;break;
+                    }
+                    if(n[k]=='1')
+                        word+=twos[parseInt(n[k+1])];
+                    else
+                    {
+                        word+=tens[parseInt(n[k])];
+                        if(n[k+1]!='0')
+                            word+=ones[parseInt(n[k+1])];;
+                    }
+                }
+                else if(numLength==3)
+                {
+                    word+=ones[parseInt(n[0])]+' hundred';
+                    if(n[1]=='0' && n[2]=='0')
+                        word+='';
+                    else if(n[1]=='0')
+                        word+=ones[parseInt(n[2])];
+                    else if(n[1]=='1')
+                        word+=twos[parseInt(n[2])];
+                    else
+                    {
+                        word+=tens[parseInt(n[1])];
+                        if(n[2]!=0)
+                            word+=ones[parseInt(n[2])];
+                    }
+                }
+                document.getElementById("text-box-2").value=word;
+            }
+        </script>
+    </body>
+</html>
